@@ -1,7 +1,7 @@
-# CA3-TanThienNguyenVN
+## Project 7: Basic Big Data Architecture with Hadoop-Hive-Spark using Infrastructure as Code (IaC)
 -----------------------
 
-## Problem Statement 
+### Problem Statement 
 - We (Data Analysis Team in Company A) are facing several issues when using existing DWH Architecture to store and extract data for analysis as below:
 ```
 Performance:
@@ -22,7 +22,7 @@ Response Time:
 
 - We expect to build a new system with high scalability, high availability, and high performance for a vast amount of data.
 
-## Solution Proposal
+### Solution Proposal
 - We decided to choose Hadoop Ecosystem (HDFS, Hive, and Spark) for POC and Performance Test before bringing it all into production. 
 
 - Installation steps (end-to-end) are expected to be conducted using VagrantFile. However, we will do it step-by-step manually first to ensure each step works well.
@@ -48,7 +48,7 @@ Vagrant
 
 ![Proposal Architecture](/pictures/proposalArchitecture.PNG)
 
-## Prerequisites
+### Prerequisites
 #### Hardware Preparation
 - Node1: 40G/3G RAM/2Core - NameNode for Hadoop, MasterNode for Spark and Hive
 - Node2: 40G/1G RAM/1Core - DataNode for Hadoop and Slaves for Spark
@@ -60,7 +60,7 @@ Vagrant
 - Hive: apache-hive-3.1.2-bin.tar.gz (https://dlcdn.apache.org/hive/hive-3.1.2/apache-hive-3.1.2-bin.tar.gz)
 - Spark: spark-3.0.3-bin-hadoop3.2.tgz (https://dlcdn.apache.org/spark/spark-3.0.3/spark-3.0.3-bin-hadoop3.2.tgz)
 
-## Source code tree
+### Source code tree
 ```
 README.md        : The markdown. Please read this first
 Vagrantfile      : File. To build up virtual machines with configuration
@@ -75,7 +75,7 @@ Vagrantfile      : File. To build up virtual machines with configuration
 /backup           : Folder. Contain backup versions
 ```
 
-## Step-by-step Implementation
+### Step-by-step Implementation
 ```
 Step 0. Vagrant up - Vagrantfile will create 3 VMs on 172.16.0.x/24 network and do the following jobs:
        - Update and upgrade system
@@ -111,7 +111,7 @@ Step 3. Post provisioning Run Examples (/postprovisioning/Step3-Post-Provisionin
 
 ```
 
-## Conclusion and Discussion
+### Conclusion and Discussion
 - This proposal successfully installed the CORE part, including Hadoop clustered, Yarn, Hive, and Spark, on three Ubuntu Virtualboxes using Vagrantfile.
 
 - There are some configs that cannot be scripted. Therefore, I have to run them manually in [Step2-Post-Provisioning-SSH-Start](/postprovisioning/Step2-Post-Provisioning-SSH-Start.sh)
@@ -122,12 +122,12 @@ Step 3. Post provisioning Run Examples (/postprovisioning/Step3-Post-Provisionin
 
 - The [Report](/document/CA3_Tan%20Thien%20Nguyen_Report.pdf) and [Step by Step Screenshots](/document/Appendix%20A_Step-by-step%20Screenshots_Tan%20Thien%20Nguyen.pdf) are stored in [document](/document) folder for more detail.
 
-## Future Implementation
+### Future Implementation
 - Future implementation is about loading raw data into Hive and connecting SparkSQL to Hive using Pyspark to analyze and visualize data on Jupyter notebook.
 
 - There are more configs, and version compatibility checks need to be done to complete the ultimate flow in the future.
 
-## Reference
+### Reference
 - https://medium.com/@jootorres_11979/how-to-set-up-a-hadoop-3-2-1-multi-node-cluster-on-ubuntu-18-04-2-nodes-567ca44a3b12
 - https://dzone.com/articles/install-a-hadoop-cluster-on-ubuntu-18041
 - https://github.com/eellpp/spark-yarn-hadoop-cluster-vagrant
