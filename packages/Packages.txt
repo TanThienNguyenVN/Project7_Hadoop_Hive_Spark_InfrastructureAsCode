@@ -1,0 +1,5 @@
+#### Packages MUST BE DOWNLOADED and put into /packages folder. Github doesnot allow to upload big file > 100MB, so, I cannot put them into Github.
+- Oracle Java: jdk-8u171-linux-x64.tar.gz (https://download.oracle.com/otn/java/jdk/8u171-b11/512cd62ec5174c3487ac17c61aaa89e8/jdk-8u171-linux-x64.tar.gz)
+- Hadoop: hadoop-3.2.1.tar.gz (https://archive.apache.org/dist/hadoop/common/hadoop-3.2.1/hadoop-3.2.1.tar.gz)
+- Hive: apache-hive-3.1.2-bin.tar.gz (https://dlcdn.apache.org/hive/hive-3.1.2/apache-hive-3.1.2-bin.tar.gz)
+- Spark: spark-3.0.3-bin-hadoop3.2.tgz (https://dlcdn.apache.org/spark/spark-3.0.3/spark-3.0.3-bin-hadoop3.2.tgz)
